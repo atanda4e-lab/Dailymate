@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DailyMate | Student Productivity</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         LANDING PAGE
+    ====================================================== -->
+
+    <section id="landingPage">
+
+        <header class="navbar">
+
+            <div class="logo">
+                DailyMate
+            </div>
+
+            <div class="nav-buttons">
+
+                <button
+                    class="secondary-btn"
+                    onclick="showLogin()"
+                >
+                    Login
+                </button>
+
+                <button
+                    class="primary-btn"
+                    onclick="showRegister()"
+                >
+                    Get Started
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div class="hero">
+
+            <div class="hero-content">
+
+                <span class="section-label">
+                    STUDENT PRODUCTIVITY
+                </span>
+
+                <h1>
+                    Organize Your
+                    <span>Student Life</span>
+                    With DailyMate
+                </h1>
+
+                <p>
+                    Manage your courses, assignments,
+                    timetable, goals, expenses and study
+                    sessions all in one place.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="primary-btn"
+                        onclick="showRegister()"
+                    >
+                        Create Free Account
+                    </button>
+
+                    <button
+                        class="secondary-btn"
+                        onclick="showLogin()"
+                    >
+                        Login
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Everything You Need
+                </h3>
+
+                <p>
+                    One simple productivity
+                    dashboard designed for students.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LOGIN PAGE
+    ====================================================== -->
+
+    <section
+        id="loginPage"
+        class="auth-page"
+        style="display: none;"
+    >
+
+        <div class="auth-card">
+
+            <div class="auth-header">
+
+                <div class="logo">
+                    DailyMate
+                </div>
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+                <p>
+                    Login to continue to your dashboard.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <div
+                    id="loginMessage"
+                    class="message"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-btn"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <p class="auth-switch">
+
+                Don't have an account?
+
+                <button
+                    type="button"
+                    onclick="showRegister()"
+                >
+                    Create Account
+                </button>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         REGISTER PAGE
+    ====================================================== -->
+
+    <section
+        id="registerPage"
+        class="auth-page"
+        style="display: none;"
+    >
+
+        <div class="auth-card register-card">
+
+            <div class="auth-header">
+
+                <div class="logo">
+                    DailyMate
+                </div>
+
+                <h2>
+                    Create Your Account
+                </h2>
+
+                <p>
+                    Start organizing your student life.
+                </p>
+
+            </div>
+
+
+            <form id="registerForm">
+
+
+                <!-- Full Name -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="registerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- University -->
+
+                <div class="form-group">
+
+                    <label for="university">
+                        University
+                    </label>
+
+                    <input
+                        type="text"
+                        id="university"
+                        name="university"
+                        placeholder="Select your university"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Department -->
+
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <input
+                        type="text"
+                        id="department"
+                        name="department"
+                        placeholder="Select your department"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Level -->
+
+                <div class="form-group">
+
+                    <label for="level">
+                        Level
+                    </label>
+
+                    <select
+                        id="level"
+                        name="level"
+                        required
+                    >
+
+                        <option value="">
+                            Select Level
+                        </option>
+
+                        <option value="100">
+                            100 Level
+                        </option>
+
+                        <option value="200">
+                            200 Level
+                        </option>
+
+                        <option value="300">
+                            300 Level
+                        </option>
+
+                        <option value="400">
+                            400 Level
+                        </option>
+
+                        <option value="500">
+                            500 Level
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Semester -->
+
+                <div class="form-group">
+
+                    <label for="semester">
+                        Semester
+                    </label>
+
+                    <select
+                        id="semester"
+                        name="semester"
+                        required
+                    >
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                        <option value="First Semester">
+                            First Semester
+                        </option>
+
+                        <option value="Second Semester">
+                            Second Semester
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div
+                    id="registerMessage"
+                    class="message"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-btn"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p class="auth-switch">
+
+                Already have an account?
+
+                <button
+                    type="button"
+                    onclick="showLogin()"
+                >
+                    Login
+                </button>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <section
+        id="dashboardPage"
+        style="display: none;"
+    >
+
+
+        <!-- Dashboard Navigation -->
+
+        <header class="dashboard-navbar">
+
+            <div class="logo">
+                DailyMate
+            </div>
+
+
+            <div class="dashboard-user">
+
+                <div
+                    id="dashboardAvatar"
+                    class="avatar"
+                >
+                    D
+                </div>
+
+                <span id="dashboardUserName">
+                    Student
+                </span>
+
+
+                <button
+                    class="logout-btn"
+                    onclick="logoutUser()"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- Dashboard Content -->
+
+        <main class="dashboard-container">
+
+
+            <!-- Welcome -->
+
+            <div class="welcome-section">
+
+                <div>
+
+                    <span class="section-label">
+                        STUDENT DASHBOARD
+                    </span>
+
+                    <h1>
+                        Welcome back,
+                        <span id="welcomeName">
+                            Student
+                        </span>
+                    </h1>
+
+                    <p>
+                        Stay organized and make progress
+                        every day.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <div class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Courses
+                        </span>
+
+                        <h3 id="courseCount">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Pending Assignments
+                        </span>
+
+                        <h3 id="assignmentCount">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🎯
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Active Goals
+                        </span>
+
+                        <h3 id="goalCount">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Expenses
+                        </span>
+
+                        <h3 id="expenseTotal">
+                            ₦0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUICK NAVIGATION
+            ================================================== -->
+
+            <div class="quick-nav">
+
+                <button
+                    onclick="showDashboardSection('coursesSection')"
+                >
+                    📚 Courses
+                </button>
+
+                <button
+                    onclick="showDashboardSection('assignmentsSection')"
+                >
+                    📝 Assignments
+                </button>
+
+                <button
+                    onclick="showDashboardSection('timetableSection')"
+                >
+                    🗓️ Timetable
+                </button>
+
+                <button
+                    onclick="showDashboardSection('goalsSection')"
+                >
+                    🎯 Goals
+                </button>
+
+                <button
+                    onclick="showDashboardSection('expensesSection')"
+                >
+                    💰 Expenses
+                </button>
+
+                <button
+                    onclick="showDashboardSection('studyTimerSection')"
+                >
+                    ⏱️ Study Timer
+                </button>
+
+                <button
+                    onclick="showDashboardSection('profileSection')"
+                >
+                    👤 Profile
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 COURSE MANAGER
+            ================================================== -->
+
+            <section
+                id="coursesSection"
+                class="manager-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            ACADEMICS
+                        </span>
+
+                        <h2>
+                            Course Manager
+                        </h2>
+
+                        <p>
+                            Manage your registered courses.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        onclick="openCourseForm()"
+                    >
+                        + Add Course
+                    </button>
+
+                </div>
+
+
+                <!-- Course Statistics -->
+
+                <div class="manager-stats">
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Total Courses
+                        </span>
+
+                        <strong id="totalCourses">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Total Units
+                        </span>
+
+                        <strong id="totalUnits">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Course Form -->
+
+                <div
+                    id="courseFormCard"
+                    class="form-card"
+                    style="display: none;"
+                >
+
+                    <div class="form-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                COURSE
+                            </span>
+
+                            <h3 id="courseFormTitle">
+                                Add Course
+                            </h3>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="close-btn"
+                            onclick="closeCourseForm()"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form id="courseForm">
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="courseCode">
+                                    Course Code
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="courseCode"
+                                    placeholder="e.g. CSC308"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="courseTitle">
+                                    Course Title
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="courseTitle"
+                                    placeholder="e.g. Operating Systems"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="courseUnit">
+                                    Course Unit
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="courseUnit"
+                                    min="1"
+                                    max="10"
+                                    placeholder="e.g. 3"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="courseSemester">
+                                    Semester
+                                </label>
+
+                                <select
+                                    id="courseSemester"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Semester
+                                    </option>
+
+                                    <option value="First Semester">
+                                        First Semester
+                                    </option>
+
+                                    <option value="Second Semester">
+                                        Second Semester
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="courseMessage"
+                            class="message"
+                        ></div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="primary-btn"
+                            >
+                                Save Course
+                            </button>
+
+                            <button
+                                type="button"
+                                class="secondary-btn"
+                                onclick="closeCourseForm()"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Course List -->
+
+                <div class="list-card">
+
+                    <div class="list-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                COURSES
+                            </span>
+
+                            <h3>
+                                Your Courses
+                            </h3>
+
+                        </div>
+
+                        <span
+                            id="courseListCount"
+                            class="list-count"
+                        >
+                            0 courses
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="courseList"
+                        class="course-list"
+                    >
+
+                        <div class="empty-state">
+
+                            <h3>
+                                No Courses Yet
+                            </h3>
+
+                            <p>
+                                Add your first course
+                                to start managing
+                                your academic work.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ASSIGNMENT MANAGER
+            ================================================== -->
+
+            <section
+                id="assignmentsSection"
+                class="manager-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            ACADEMICS
+                        </span>
+
+                        <h2>
+                            Assignment Manager
+                        </h2>
+
+                        <p>
+                            Track your assignments and deadlines.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        onclick="openAssignmentForm()"
+                    >
+                        + Add Assignment
+                    </button>
+
+                </div>
+
+
+                <!-- Assignment Statistics -->
+
+                <div class="manager-stats">
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="totalAssignments">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <strong id="pendingAssignments">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Completed
+                        </span>
+
+                        <strong id="completedAssignments">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Overdue
+                        </span>
+
+                        <strong id="overdueAssignments">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Assignment Form -->
+
+                <div
+                    id="assignmentFormCard"
+                    class="form-card"
+                    style="display: none;"
+                >
+
+                    <div class="form-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                ASSIGNMENT
+                            </span>
+
+                            <h3 id="assignmentFormTitle">
+                                Add Assignment
+                            </h3>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="close-btn"
+                            onclick="closeAssignmentForm()"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form id="assignmentForm">
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="assignmentTitle">
+                                    Assignment Title
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="assignmentTitle"
+                                    placeholder="e.g. OS Assignment"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="assignmentCourse">
+                                    Course
+                                </label>
+
+                                <select
+                                    id="assignmentCourse"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Course
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="assignmentDueDate">
+                                    Due Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="assignmentDueDate"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="assignmentPriority">
+                                    Priority
+                                </label>
+
+                                <select
+                                    id="assignmentPriority"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Priority
+                                    </option>
+
+                                    <option value="low">
+                                        Low
+                                    </option>
+
+                                    <option value="medium">
+                                        Medium
+                                    </option>
+
+                                    <option value="high">
+                                        High
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="assignmentDescription">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="assignmentDescription"
+                                rows="4"
+                                placeholder="Assignment details..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div
+                            id="assignmentMessage"
+                            class="message"
+                        ></div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="primary-btn"
+                            >
+                                Save Assignment
+                            </button>
+
+                            <button
+                                type="button"
+                                class="secondary-btn"
+                                onclick="closeAssignmentForm()"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Assignment List -->
+
+                <div class="list-card">
+
+                    <div class="list-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                ASSIGNMENTS
+                            </span>
+
+                            <h3>
+                                Your Assignments
+                            </h3>
+
+                        </div>
+
+                        <span
+                            id="assignmentListCount"
+                            class="list-count"
+                        >
+                            0 assignments
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="assignmentList"
+                        class="assignment-list"
+                    >
+
+                        <div class="empty-state">
+
+                            <h3>
+                                No Assignments Yet
+                            </h3>
+
+                            <p>
+                                Add your first assignment
+                                to start tracking your work.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TIMETABLE MANAGER
+            ================================================== -->
+
+            <section
+                id="timetableSection"
+                class="manager-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            SCHEDULE
+                        </span>
+
+                        <h2>
+                            Timetable Manager
+                        </h2>
+
+                        <p>
+                            Organize your weekly lecture schedule.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        onclick="openTimetableForm()"
+                    >
+                        + Add Class
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="timetableFormCard"
+                    class="form-card"
+                    style="display: none;"
+                >
+
+                    <div class="form-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                TIMETABLE
+                            </span>
+
+                            <h3 id="timetableFormTitle">
+                                Add Class
+                            </h3>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="close-btn"
+                            onclick="closeTimetableForm()"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form id="timetableForm">
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="timetableDay">
+                                    Day
+                                </label>
+
+                                <select
+                                    id="timetableDay"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Day
+                                    </option>
+
+                                    <option value="Monday">
+                                        Monday
+                                    </option>
+
+                                    <option value="Tuesday">
+                                        Tuesday
+                                    </option>
+
+                                    <option value="Wednesday">
+                                        Wednesday
+                                    </option>
+
+                                    <option value="Thursday">
+                                        Thursday
+                                    </option>
+
+                                    <option value="Friday">
+                                        Friday
+                                    </option>
+
+                                    <option value="Saturday">
+                                        Saturday
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="timetableCourse">
+                                    Course
+                                </label>
+
+                                <select
+                                    id="timetableCourse"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Course
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="timetableStart">
+                                    Start Time
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="timetableStart"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="timetableEnd">
+                                    End Time
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="timetableEnd"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="timetableVenue">
+                                    Venue
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="timetableVenue"
+                                    placeholder="e.g. ICT Hall"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="timetableLecturer">
+                                    Lecturer
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="timetableLecturer"
+                                    placeholder="Lecturer name"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="timetableMessage"
+                            class="message"
+                        ></div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="primary-btn"
+                            >
+                                Save Class
+                            </button>
+
+                            <button
+                                type="button"
+                                class="secondary-btn"
+                                onclick="closeTimetableForm()"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <div class="list-card">
+
+                    <div class="list-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                WEEKLY SCHEDULE
+                            </span>
+
+                            <h3>
+                                Your Timetable
+                            </h3>
+
+                        </div>
+
+                        <span
+                            id="timetableListCount"
+                            class="list-count"
+                        >
+                            0 classes
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="timetableList"
+                        class="timetable-list"
+                    >
+
+                        <div class="empty-state">
+
+                            <h3>
+                                No Classes Yet
+                            </h3>
+
+                            <p>
+                                Add your first class
+                                to build your timetable.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 GOALS MANAGER
+            ================================================== -->
+
+            <section
+                id="goalsSection"
+                class="manager-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            PRODUCTIVITY
+                        </span>
+
+                        <h2>
+                            Goals Manager
+                        </h2>
+
+                        <p>
+                            Set goals and track your progress.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        onclick="openGoalForm()"
+                    >
+                        + Add Goal
+                    </button>
+
+                </div>
+
+
+                <div class="manager-stats">
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Total Goals
+                        </span>
+
+                        <strong id="totalGoals">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Active
+                        </span>
+
+                        <strong id="activeGoals">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Completed
+                        </span>
+
+                        <strong id="completedGoals">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="manager-stat-card">
+
+                        <span>
+                            Average Progress
+                        </span>
+
+                        <strong id="averageGoalProgress">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="goalFormCard"
+                    class="form-card"
+                    style="display: none;"
+                >
+
+                    <div class="form-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                GOAL
+                            </span>
+
+                            <h3 id="goalFormTitle">
+                                Add Goal
+                            </h3>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="close-btn"
+                            onclick="closeGoalForm()"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form id="goalForm">
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="goalTitle">
+                                    Goal Title
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="goalTitle"
+                                    placeholder="e.g. Learn JavaScript"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="goalCategory">
+                                    Category
+                                </label>
+
+                                <select
+                                    id="goalCategory"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Category
+                                    </option>
+
+                                    <option value="Academic">
+                                        Academic
+                                    </option>
+
+                                    <option value="Programming">
+                                        Programming
+                                    </option>
+
+                                    <option value="Personal">
+                                        Personal
+                                    </option>
+
+                                    <option value="Career">
+                                        Career
+                                    </option>
+
+                                    <option value="Financial">
+                                        Financial
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="goalTargetDate">
+                                    Target Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="goalTargetDate"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="goalProgress">
+                                    Progress (%)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="goalProgress"
+                                    min="0"
+                                    max="100"
+                                    value="0"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="goalDescription">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="goalDescription"
+                                rows="4"
+                                placeholder="Describe your goal..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div
+                            id="goalMessage"
+                            class="message"
+                        ></div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="primary-btn"
+                            >
+                                Save Goal
+                            </button>
+
+                            <button
+                                type="button"
+                                class="secondary-btn"
+                                onclick="closeGoalForm()"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <div class="list-card">
+
+                    <div class="list-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                GOALS
+                            </span>
+
+                            <h3>
+                                Your Goals
+                            </h3>
+
+                        </div>
+
+                        <span
+                            id="goalListCount"
+                            class="list-count"
+                        >
+                            0 goals
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="goalList"
+                        class="goal-list"
+                    >
+
+                        <div class="empty-state">
+
+                            <h3>
+                                No Goals Yet
+                            </h3>
+
+                            <p>
+                                Create your first goal
+                                and start tracking progress.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EXPENSE MANAGER
+            ================================================== -->
+
+            <section
+                id="expensesSection"
+                class="manager-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            FINANCE
+                        </span>
+
+                        <h2>
+                            Expense Manager
+                        </h2>
+
+                        <p>
+                            Track your income and spending.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        onclick="openExpenseForm()"
+                    >
+                        + Add Transaction
+                    </button>
+
+                </div>
+
+
+                <div class="expense-stats">
+
+
+                    <div class="expense-stat-card">
+
+                        <div class="expense-stat-icon">
+                            💰
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Total Income
+                            </span>
+
+                            <h3 id="totalIncome">
+                                ₦0
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="expense-stat-card">
+
+                        <div class="expense-stat-icon">
+                            💸
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Total Expenses
+                            </span>
+
+                            <h3 id="totalExpenses">
+                                ₦0
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="expense-stat-card">
+
+                        <div class="expense-stat-icon">
+                            💵
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Balance
+                            </span>
+
+                            <h3 id="expenseBalance">
+                                ₦0
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="expenseFormCard"
+                    class="form-card"
+                    style="display: none;"
+                >
+
+                    <div class="form-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                TRANSACTION
+                            </span>
+
+                            <h3 id="expenseFormTitle">
+                                Add Transaction
+                            </h3>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="close-btn"
+                            onclick="closeExpenseForm()"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form id="expenseForm">
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="expenseType">
+                                    Transaction Type
+                                </label>
+
+                                <select
+                                    id="expenseType"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Type
+                                    </option>
+
+                                    <option value="income">
+                                        Income
+                                    </option>
+
+                                    <option value="expense">
+                                        Expense
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="expenseAmount">
+                                    Amount (₦)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="expenseAmount"
+                                    min="1"
+                                    step="0.01"
+                                    placeholder="e.g. 5000"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="expenseCategory">
+                                    Category
+                                </label>
+
+                                <select
+                                    id="expenseCategory"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Category
+                                    </option>
+
+                                    <option value="Food">
+                                        Food
+                                    </option>
+
+                                    <option value="Transport">
+                                        Transport
+                                    </option>
+
+                                    <option value="School">
+                                        School
+                                    </option>
+
+                                    <option value="Data">
+                                        Data
+                                    </option>
+
+                                    <option value="Accommodation">
+                                        Accommodation
+                                    </option>
+
+                                    <option value="Entertainment">
+                                        Entertainment
+                                    </option>
+
+                                    <option value="Shopping">
+                                        Shopping
+                                    </option>
+
+                                    <option value="Salary">
+                                        Salary
+                                    </option>
+
+                                    <option value="Allowance">
+                                        Allowance
+                                    </option>
+
+                                    <option value="Business">
+                                        Business
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="expenseDate">
+                                    Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="expenseDate"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="expenseDescription">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="expenseDescription"
+                                rows="4"
+                                placeholder="What was this transaction for?"
+                            ></textarea>
+
+                        </div>
+
+
+                        <div
+                            id="expenseMessage"
+                            class="message"
+                        ></div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="primary-btn"
+                            >
+                                Save Transaction
+                            </button>
+
+                            <button
+                                type="button"
+                                class="secondary-btn"
+                                onclick="closeExpenseForm()"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <div class="list-card">
+
+                    <div class="list-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                TRANSACTIONS
+                            </span>
+
+                            <h3>
+                                Your Transactions
+                            </h3>
+
+                        </div>
+
+                        <span
+                            id="expenseListCount"
+                            class="list-count"
+                        >
+                            0 transactions
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="expenseList"
+                        class="expense-list"
+                    >
+
+                        <div class="empty-state">
+
+                            <h3>
+                                No Transactions Yet
+                            </h3>
+
+                            <p>
+                                Add your first income or
+                                expense to start tracking.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 STUDY TIMER
+            ================================================== -->
+
+            <section
+                id="studyTimerSection"
+                class="manager-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            PRODUCTIVITY
+                        </span>
+
+                        <h2>
+                            Study Timer
+                        </h2>
+
+                        <p>
+                            Stay focused and manage your
+                            study sessions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="study-timer-container">
+
+
+                    <!-- Timer Card -->
+
+                    <div class="timer-card">
+
+                        <div class="timer-header">
+
+                            <span class="section-label">
+                                STUDY SESSION
+                            </span>
+
+                            <h3 id="timerMode">
+                                Focus Time
+                            </h3>
+
+                        </div>
+
+
+                        <div class="timer-display">
+
+                            <span id="timerMinutes">
+                                25
+                            </span>
+
+                            <span class="timer-colon">
+                                :
+                            </span>
+
+                            <span id="timerSeconds">
+                                00
+                            </span>
+
+                        </div>
+
+
+                        <div class="timer-progress">
+
+                            <div
+                                id="timerProgressBar"
+                                class="timer-progress-bar"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="timer-controls">
+
+                            <button
+                                id="startTimerBtn"
+                                class="primary-btn"
+                                onclick="startStudyTimer()"
+                            >
+                                ▶ Start
+                            </button>
+
+
+                            <button
+                                id="pauseTimerBtn"
+                                class="secondary-btn"
+                                onclick="pauseStudyTimer()"
+                                disabled
+                            >
+                                ⏸ Pause
+                            </button>
+
+
+                            <button
+                                class="secondary-btn"
+                                onclick="resetStudyTimer()"
+                            >
+                                ↻ Reset
+                            </button>
+
+                        </div>
+
+
+                        <div class="timer-modes">
+
+
+                            <button
+                                id="focusModeBtn"
+                                class="timer-mode-btn active"
+                                onclick="setTimerMode('focus')"
+                            >
+                                Focus
+
+                                <span>
+                                    25 min
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                id="shortBreakModeBtn"
+                                class="timer-mode-btn"
+                                onclick="setTimerMode('short')"
+                            >
+                                Short Break
+
+                                <span>
+                                    5 min
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                id="longBreakModeBtn"
+                                class="timer-mode-btn"
+                                onclick="setTimerMode('long')"
+                            >
+                                Long Break
+
+                                <span>
+                                    15 min
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Timer Statistics -->
+
+                    <div class="timer-stat-card">
+
+                        <div class="timer-stat-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    TODAY
+                                </span>
+
+                                <h3>
+                                    Study Statistics
+                                </h3>
+
+                            </div>
+
+
+                            <div class="timer-stat-icon">
+                                📚
+                            </div>
+
+                        </div>
+
+
+                        <div class="timer-stat-list">
+
+
+                            <div class="timer-stat-item">
+
+                                <span>
+                                    Completed Sessions
+                                </span>
+
+                                <strong
+                                    id="completedStudySessions"
+                                >
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="timer-stat-item">
+
+                                <span>
+                                    Focus Minutes
+                                </span>
+
+                                <strong
+                                    id="totalFocusMinutes"
+                                >
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="timer-stat-item">
+
+                                <span>
+                                    Current Mode
+                                </span>
+
+                                <strong
+                                    id="currentTimerMode"
+                                >
+                                    Focus
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="timerMessage"
+                            class="message"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFILE
+            ================================================== -->
+
+            <section
+                id="profileSection"
+                class="manager-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            ACCOUNT
+                        </span>
+
+                        <h2>
+                            Student Profile
+                        </h2>
+
+                        <p>
+                            View your DailyMate account information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-card">
+
+
+                    <div class="profile-top">
+
+                        <div
+                            id="profileAvatar"
+                            class="profile-avatar"
+                        >
+                            D
+                        </div>
+
+
+                        <div>
+
+                            <h2 id="profileFullName">
+                                Student
+                            </h2>
+
+                            <p id="profileEmail">
+                                student@example.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+
+                        <div class="profile-detail">
+
+                            <span>
+                                University
+                            </span>
+
+                            <strong id="profileUniversity">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-detail">
+
+                            <span>
+                                Department
+                            </span>
+
+                            <strong id="profileDepartment">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-detail">
+
+                            <span>
+                                Level
+                            </span>
+
+                            <strong id="profileLevel">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-detail">
+
+                            <span>
+                                Semester
+                            </span>
+
+                            <strong id="profileSemester">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
