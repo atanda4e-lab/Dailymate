@@ -2,26 +2,20 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="DailyMate - Student Productivity and Academic Management">
 
     <title>DailyMate | Student Productivity</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-
 
     <!-- =====================================================
          LANDING PAGE
@@ -32,65 +26,55 @@
         <header class="navbar">
 
             <div class="logo">
-                DailyMate
+                <span>Daily</span>Mate
             </div>
 
-            <div class="nav-buttons">
-
-                <button
-                    class="secondary-btn"
-                    onclick="showLogin()"
-                >
+            <nav>
+                <button onclick="showLogin()">
                     Login
                 </button>
 
                 <button
-                    class="primary-btn"
-                    onclick="showRegister()"
-                >
+                    class="nav-primary"
+                    onclick="showRegister()">
                     Get Started
                 </button>
-
-            </div>
+            </nav>
 
         </header>
 
 
-        <div class="hero">
+        <main class="hero">
 
             <div class="hero-content">
 
-                <span class="section-label">
-                    STUDENT PRODUCTIVITY
+                <span class="hero-badge">
+                    🎓 Your Student Life, Organized
                 </span>
 
                 <h1>
-                    Organize Your
-                    <span>Student Life</span>
-                    With DailyMate
+                    Study smarter.
+                    <span>Achieve more.</span>
                 </h1>
 
                 <p>
-                    Manage your courses, assignments,
-                    timetable, goals, expenses and study
-                    sessions all in one place.
+                    DailyMate helps students manage courses,
+                    assignments, timetables, goals, expenses
+                    and study sessions in one simple platform.
                 </p>
-
 
                 <div class="hero-buttons">
 
                     <button
                         class="primary-btn"
-                        onclick="showRegister()"
-                    >
-                        Create Free Account
+                        onclick="showRegister()">
+                        Get Started
                     </button>
 
                     <button
                         class="secondary-btn"
-                        onclick="showLogin()"
-                    >
-                        Login
+                        onclick="showLogin()">
+                        Login to DailyMate
                     </button>
 
                 </div>
@@ -100,48 +84,125 @@
 
             <div class="hero-card">
 
-                <div class="hero-card-icon">
-                    📚
+                <div class="mini-dashboard">
+
+                    <div class="mini-header">
+
+                        <div>
+                            <small>Good morning</small>
+                            <h3>Student 👋</h3>
+                        </div>
+
+                        <div class="mini-avatar">
+                            S
+                        </div>
+
+                    </div>
+
+
+                    <div class="mini-stats">
+
+                        <div>
+                            <strong>8</strong>
+                            <span>Courses</span>
+                        </div>
+
+                        <div>
+                            <strong>5</strong>
+                            <span>Tasks</span>
+                        </div>
+
+                        <div>
+                            <strong>72%</strong>
+                            <span>Goals</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mini-task">
+
+                        <span>Today's Progress</span>
+
+                        <div class="mini-progress">
+                            <div></div>
+                        </div>
+
+                        <small>
+                            Keep going — you're doing great!
+                        </small>
+
+                    </div>
+
                 </div>
-
-                <h3>
-                    Everything You Need
-                </h3>
-
-                <p>
-                    One simple productivity
-                    dashboard designed for students.
-                </p>
 
             </div>
 
-        </div>
+        </main>
+
+
+        <section class="features">
+
+            <div class="feature-card">
+                <span>📚</span>
+                <h3>Courses</h3>
+                <p>
+                    Keep all your courses organized.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span>📝</span>
+                <h3>Assignments</h3>
+                <p>
+                    Track deadlines and completed work.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span>🎯</span>
+                <h3>Goals</h3>
+                <p>
+                    Set goals and monitor your progress.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span>⏱️</span>
+                <h3>Study Timer</h3>
+                <p>
+                    Build a consistent study routine.
+                </p>
+            </div>
+
+        </section>
 
     </section>
-
 
 
     <!-- =====================================================
          LOGIN PAGE
     ====================================================== -->
 
-    <section
-        id="loginPage"
-        class="auth-page"
-        style="display: none;"
-    >
+    <section id="loginPage" class="auth-page">
 
         <div class="auth-card">
 
+            <button
+                class="back-btn"
+                onclick="showLanding()">
+                ← Back
+            </button>
+
             <div class="auth-header">
 
-                <div class="logo">
+                <div class="auth-logo">
                     DailyMate
                 </div>
 
-                <h2>
+                <h1>
                     Welcome Back
-                </h2>
+                </h1>
 
                 <p>
                     Login to continue to your dashboard.
@@ -162,8 +223,7 @@
                         type="email"
                         id="loginEmail"
                         placeholder="Enter your email"
-                        required
-                    >
+                        required>
 
                 </div>
 
@@ -178,22 +238,20 @@
                         type="password"
                         id="loginPassword"
                         placeholder="Enter your password"
-                        required
-                    >
+                        required>
 
                 </div>
 
 
                 <div
                     id="loginMessage"
-                    class="message"
-                ></div>
+                    class="message">
+                </div>
 
 
                 <button
                     type="submit"
-                    class="primary-btn full-btn"
-                >
+                    class="auth-btn">
                     Login
                 </button>
 
@@ -206,8 +264,7 @@
 
                 <button
                     type="button"
-                    onclick="showRegister()"
-                >
+                    onclick="showRegister()">
                     Create Account
                 </button>
 
@@ -218,28 +275,29 @@
     </section>
 
 
-
     <!-- =====================================================
          REGISTER PAGE
     ====================================================== -->
 
-    <section
-        id="registerPage"
-        class="auth-page"
-        style="display: none;"
-    >
+    <section id="registerPage" class="auth-page">
 
         <div class="auth-card register-card">
 
+            <button
+                class="back-btn"
+                onclick="showLanding()">
+                ← Back
+            </button>
+
             <div class="auth-header">
 
-                <div class="logo">
+                <div class="auth-logo">
                     DailyMate
                 </div>
 
-                <h2>
+                <h1>
                     Create Your Account
-                </h2>
+                </h1>
 
                 <p>
                     Start organizing your student life.
@@ -250,44 +308,39 @@
 
             <form id="registerForm">
 
+                <div class="form-row">
 
-                <!-- Full Name -->
+                    <div class="form-group">
 
-                <div class="form-group">
+                        <label for="fullName">
+                            Full Name
+                        </label>
 
-                    <label for="fullName">
-                        Full Name
-                    </label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required>
 
-                    <input
-                        type="text"
-                        id="fullName"
-                        placeholder="Enter your full name"
-                        required
-                    >
-
-                </div>
+                    </div>
 
 
-                <!-- Email -->
+                    <div class="form-group">
 
-                <div class="form-group">
+                        <label for="registerEmail">
+                            Email Address
+                        </label>
 
-                    <label for="registerEmail">
-                        Email Address
-                    </label>
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="Enter your email"
+                            required>
 
-                    <input
-                        type="email"
-                        id="registerEmail"
-                        placeholder="Enter your email"
-                        required
-                    >
+                    </div>
 
                 </div>
 
-
-                <!-- Password -->
 
                 <div class="form-group">
 
@@ -298,136 +351,122 @@
                     <input
                         type="password"
                         id="registerPassword"
-                        placeholder="Create a password"
+                        placeholder="Minimum 6 characters"
                         minlength="6"
-                        required
-                    >
+                        required>
 
                 </div>
 
 
-                <!-- University -->
+                <div class="form-row">
 
-                <div class="form-group">
+                    <div class="form-group">
 
-                    <label for="university">
-                        University
-                    </label>
+                        <label for="university">
+                            University
+                        </label>
 
-                    <input
-                        type="text"
-                        id="university"
-                        name="university"
-                        placeholder="Select your university"
-                        required
-                    >
+                        <input
+                            type="text"
+                            id="university"
+                            placeholder="Select university"
+                            required>
 
-                </div>
+                    </div>
 
 
-                <!-- Department -->
+                    <div class="form-group">
 
-                <div class="form-group">
+                        <label for="department">
+                            Department
+                        </label>
 
-                    <label for="department">
-                        Department
-                    </label>
+                        <input
+                            type="text"
+                            id="department"
+                            placeholder="Select department"
+                            required>
 
-                    <input
-                        type="text"
-                        id="department"
-                        name="department"
-                        placeholder="Select your department"
-                        required
-                    >
+                    </div>
 
                 </div>
 
 
-                <!-- Level -->
+                <div class="form-row">
 
-                <div class="form-group">
+                    <div class="form-group">
 
-                    <label for="level">
-                        Level
-                    </label>
+                        <label for="level">
+                            Level
+                        </label>
 
-                    <select
-                        id="level"
-                        name="level"
-                        required
-                    >
+                        <select id="level" required>
 
-                        <option value="">
-                            Select Level
-                        </option>
+                            <option value="">
+                                Select Level
+                            </option>
 
-                        <option value="100">
-                            100 Level
-                        </option>
+                            <option value="100 Level">
+                                100 Level
+                            </option>
 
-                        <option value="200">
-                            200 Level
-                        </option>
+                            <option value="200 Level">
+                                200 Level
+                            </option>
 
-                        <option value="300">
-                            300 Level
-                        </option>
+                            <option value="300 Level">
+                                300 Level
+                            </option>
 
-                        <option value="400">
-                            400 Level
-                        </option>
+                            <option value="400 Level">
+                                400 Level
+                            </option>
 
-                        <option value="500">
-                            500 Level
-                        </option>
+                            <option value="500 Level">
+                                500 Level
+                            </option>
 
-                    </select>
+                        </select>
 
-                </div>
+                    </div>
 
 
-                <!-- Semester -->
+                    <div class="form-group">
 
-                <div class="form-group">
+                        <label for="semester">
+                            Semester
+                        </label>
 
-                    <label for="semester">
-                        Semester
-                    </label>
+                        <select id="semester" required>
 
-                    <select
-                        id="semester"
-                        name="semester"
-                        required
-                    >
+                            <option value="">
+                                Select Semester
+                            </option>
 
-                        <option value="">
-                            Select Semester
-                        </option>
+                            <option value="First Semester">
+                                First Semester
+                            </option>
 
-                        <option value="First Semester">
-                            First Semester
-                        </option>
+                            <option value="Second Semester">
+                                Second Semester
+                            </option>
 
-                        <option value="Second Semester">
-                            Second Semester
-                        </option>
+                        </select>
 
-                    </select>
+                    </div>
 
                 </div>
 
 
                 <div
                     id="registerMessage"
-                    class="message"
-                ></div>
+                    class="message">
+                </div>
 
 
                 <button
                     type="submit"
-                    class="primary-btn full-btn"
-                >
+                    class="auth-btn">
                     Create Account
                 </button>
 
@@ -440,8 +479,7 @@
 
                 <button
                     type="button"
-                    onclick="showLogin()"
-                >
+                    onclick="showLogin()">
                     Login
                 </button>
 
@@ -452,44 +490,60 @@
     </section>
 
 
-
     <!-- =====================================================
          DASHBOARD
     ====================================================== -->
 
-    <section
-        id="dashboardPage"
-        style="display: none;"
-    >
+    <section id="dashboardPage">
 
-
-        <!-- Dashboard Navigation -->
+        <!-- ================= NAVBAR ================= -->
 
         <header class="dashboard-navbar">
 
-            <div class="logo">
+            <div class="dashboard-logo">
                 DailyMate
             </div>
 
 
-            <div class="dashboard-user">
+            <div class="dashboard-nav-actions">
 
-                <div
-                    id="dashboardAvatar"
-                    class="avatar"
-                >
-                    D
+                <!-- NOTIFICATION BUTTON -->
+
+                <button
+                    class="notification-btn"
+                    onclick="openNotifications()"
+                    title="Notifications">
+
+                    🔔
+
+                    <span
+                        id="notificationBadge">
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- USER -->
+
+                <div class="dashboard-user">
+
+                    <div
+                        id="dashboardAvatar"
+                        class="dashboard-avatar">
+                        S
+                    </div>
+
+                    <span id="dashboardUserName">
+                        Student
+                    </span>
+
                 </div>
-
-                <span id="dashboardUserName">
-                    Student
-                </span>
 
 
                 <button
                     class="logout-btn"
-                    onclick="logoutUser()"
-                >
+                    onclick="logoutUser()">
                     Logout
                 </button>
 
@@ -498,63 +552,55 @@
         </header>
 
 
-
-        <!-- Dashboard Content -->
+        <!-- ================= DASHBOARD CONTENT ================= -->
 
         <main class="dashboard-container">
 
 
-            <!-- Welcome -->
+            <!-- ================= WELCOME ================= -->
 
-            <div class="welcome-section">
+            <section class="welcome-section">
 
                 <div>
 
-                    <span class="section-label">
-                        STUDENT DASHBOARD
-                    </span>
+                    <p class="welcome-label">
+                        Student Dashboard
+                    </p>
 
                     <h1>
-                        Welcome back,
+                        Welcome,
                         <span id="welcomeName">
                             Student
                         </span>
+                        👋
                     </h1>
 
                     <p>
-                        Stay organized and make progress
-                        every day.
+                        Manage your academic life
+                        from one place.
                     </p>
 
                 </div>
 
-            </div>
+            </section>
 
 
+            <!-- ================= STATISTICS ================= -->
 
-            <!-- =================================================
-                 STATISTICS
-            ================================================== -->
-
-            <div class="dashboard-stats">
-
+            <section class="stats-grid">
 
                 <div class="stat-card">
 
-                    <div class="stat-icon">
-                        📚
-                    </div>
+                    <span>📚</span>
 
                     <div>
+                        <strong id="courseCount">
+                            0
+                        </strong>
 
-                        <span>
+                        <p>
                             Courses
-                        </span>
-
-                        <h3 id="courseCount">
-                            0
-                        </h3>
-
+                        </p>
                     </div>
 
                 </div>
@@ -562,20 +608,16 @@
 
                 <div class="stat-card">
 
-                    <div class="stat-icon">
-                        📝
-                    </div>
+                    <span>📝</span>
 
                     <div>
-
-                        <span>
-                            Pending Assignments
-                        </span>
-
-                        <h3 id="assignmentCount">
+                        <strong id="assignmentCount">
                             0
-                        </h3>
+                        </strong>
 
+                        <p>
+                            Assignments
+                        </p>
                     </div>
 
                 </div>
@@ -583,20 +625,16 @@
 
                 <div class="stat-card">
 
-                    <div class="stat-icon">
-                        🎯
-                    </div>
+                    <span>🎯</span>
 
                     <div>
-
-                        <span>
-                            Active Goals
-                        </span>
-
-                        <h3 id="goalCount">
+                        <strong id="goalCount">
                             0
-                        </h3>
+                        </strong>
 
+                        <p>
+                            Goals
+                        </p>
                     </div>
 
                 </div>
@@ -604,95 +642,171 @@
 
                 <div class="stat-card">
 
-                    <div class="stat-icon">
-                        💰
-                    </div>
+                    <span>💰</span>
 
                     <div>
+                        <strong id="expenseTotal">
+                            ₦0.00
+                        </strong>
 
-                        <span>
-                            Total Expenses
-                        </span>
-
-                        <h3 id="expenseTotal">
-                            ₦0
-                        </h3>
-
+                        <p>
+                            Expenses
+                        </p>
                     </div>
 
                 </div>
 
-            </div>
+            </section>
 
+
+            <!-- ================= QUICK ACTIONS ================= -->
+
+            <section class="quick-actions">
+
+                <button
+                    onclick="showDashboardSection('coursesSection')">
+
+                    <span>📚</span>
+
+                    <strong>
+                        Courses
+                    </strong>
+
+                    <small>
+                        Manage courses
+                    </small>
+
+                </button>
+
+
+                <button
+                    onclick="showDashboardSection('assignmentsSection')">
+
+                    <span>📝</span>
+
+                    <strong>
+                        Assignments
+                    </strong>
+
+                    <small>
+                        Track your tasks
+                    </small>
+
+                </button>
+
+
+                <button
+                    onclick="showDashboardSection('timetableSection')">
+
+                    <span>📅</span>
+
+                    <strong>
+                        Timetable
+                    </strong>
+
+                    <small>
+                        Plan your classes
+                    </small>
+
+                </button>
+
+
+                <button
+                    onclick="showDashboardSection('goalsSection')">
+
+                    <span>🎯</span>
+
+                    <strong>
+                        Goals
+                    </strong>
+
+                    <small>
+                        Track your goals
+                    </small>
+
+                </button>
+
+
+                <button
+                    onclick="showDashboardSection('expensesSection')">
+
+                    <span>💰</span>
+
+                    <strong>
+                        Expenses
+                    </strong>
+
+                    <small>
+                        Manage money
+                    </small>
+
+                </button>
+
+
+                <button
+                    onclick="showDashboardSection('studyTimerSection')">
+
+                    <span>⏱️</span>
+
+                    <strong>
+                        Study Timer
+                    </strong>
+
+                    <small>
+                        Start studying
+                    </small>
+
+                </button>
+
+
+                <button
+                    onclick="showDashboardSection('notificationsSection')">
+
+                    <span>🔔</span>
+
+                    <strong>
+                        Notifications
+                    </strong>
+
+                    <small>
+                        View reminders
+                    </small>
+
+                </button>
+
+
+                <button
+                    onclick="showDashboardSection('profileSection')">
+
+                    <span>👤</span>
+
+                    <strong>
+                        Profile
+                    </strong>
+
+                    <small>
+                        View profile
+                    </small>
+
+                </button>
+
+            </section>
 
 
             <!-- =================================================
-                 QUICK NAVIGATION
-            ================================================== -->
-
-            <div class="quick-nav">
-
-                <button
-                    onclick="showDashboardSection('coursesSection')"
-                >
-                    📚 Courses
-                </button>
-
-                <button
-                    onclick="showDashboardSection('assignmentsSection')"
-                >
-                    📝 Assignments
-                </button>
-
-                <button
-                    onclick="showDashboardSection('timetableSection')"
-                >
-                    🗓️ Timetable
-                </button>
-
-                <button
-                    onclick="showDashboardSection('goalsSection')"
-                >
-                    🎯 Goals
-                </button>
-
-                <button
-                    onclick="showDashboardSection('expensesSection')"
-                >
-                    💰 Expenses
-                </button>
-
-                <button
-                    onclick="showDashboardSection('studyTimerSection')"
-                >
-                    ⏱️ Study Timer
-                </button>
-
-                <button
-                    onclick="showDashboardSection('profileSection')"
-                >
-                    👤 Profile
-                </button>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 COURSE MANAGER
+                 COURSES
             ================================================== -->
 
             <section
                 id="coursesSection"
-                class="manager-section"
-            >
+                class="dashboard-section">
 
                 <div class="section-header">
 
                     <div>
 
-                        <span class="section-label">
-                            ACADEMICS
+                        <span class="section-icon">
+                            📚
                         </span>
 
                         <h2>
@@ -705,90 +819,35 @@
 
                     </div>
 
-
                     <button
                         class="primary-btn"
-                        onclick="openCourseForm()"
-                    >
+                        onclick="openCourseForm()">
+
                         + Add Course
+
                     </button>
 
                 </div>
 
 
-                <!-- Course Statistics -->
-
-                <div class="manager-stats">
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Total Courses
-                        </span>
-
-                        <strong id="totalCourses">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Total Units
-                        </span>
-
-                        <strong id="totalUnits">
-                            0
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Course Form -->
+                <!-- COURSE FORM -->
 
                 <div
                     id="courseFormCard"
                     class="form-card"
-                    style="display: none;"
-                >
+                    style="display:none;">
 
-                    <div class="form-card-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                COURSE
-                            </span>
-
-                            <h3 id="courseFormTitle">
-                                Add Course
-                            </h3>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="close-btn"
-                            onclick="closeCourseForm()"
-                        >
-                            ×
-                        </button>
-
-                    </div>
-
+                    <h3>
+                        Add Course
+                    </h3>
 
                     <form id="courseForm">
 
-                        <div class="form-grid">
-
+                        <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="courseCode">
+                                <label>
                                     Course Code
                                 </label>
 
@@ -796,31 +855,33 @@
                                     type="text"
                                     id="courseCode"
                                     placeholder="e.g. CSC308"
-                                    required
-                                >
+                                    required>
 
                             </div>
 
 
                             <div class="form-group">
 
-                                <label for="courseTitle">
+                                <label>
                                     Course Title
                                 </label>
 
                                 <input
                                     type="text"
                                     id="courseTitle"
-                                    placeholder="e.g. Operating Systems"
-                                    required
-                                >
+                                    placeholder="Operating Systems"
+                                    required>
 
                             </div>
 
+                        </div>
+
+
+                        <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="courseUnit">
+                                <label>
                                     Course Unit
                                 </label>
 
@@ -829,23 +890,20 @@
                                     id="courseUnit"
                                     min="1"
                                     max="10"
-                                    placeholder="e.g. 3"
-                                    required
-                                >
+                                    required>
 
                             </div>
 
 
                             <div class="form-group">
 
-                                <label for="courseSemester">
+                                <label>
                                     Semester
                                 </label>
 
                                 <select
                                     id="courseSemester"
-                                    required
-                                >
+                                    required>
 
                                     <option value="">
                                         Select Semester
@@ -868,24 +926,22 @@
 
                         <div
                             id="courseMessage"
-                            class="message"
-                        ></div>
+                            class="message">
+                        </div>
 
 
                         <div class="form-actions">
 
                             <button
                                 type="submit"
-                                class="primary-btn"
-                            >
+                                class="primary-btn">
                                 Save Course
                             </button>
 
                             <button
                                 type="button"
-                                class="secondary-btn"
                                 onclick="closeCourseForm()"
-                            >
+                                class="secondary-btn">
                                 Cancel
                             </button>
 
@@ -896,76 +952,66 @@
                 </div>
 
 
-                <!-- Course List -->
+                <div class="section-stats">
 
-                <div class="list-card">
+                    <div>
+                        <strong id="totalCourses">
+                            0
+                        </strong>
 
-                    <div class="list-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                COURSES
-                            </span>
-
-                            <h3>
-                                Your Courses
-                            </h3>
-
-                        </div>
-
-                        <span
-                            id="courseListCount"
-                            class="list-count"
-                        >
-                            0 courses
+                        <span>
+                            Total Courses
                         </span>
-
                     </div>
 
 
-                    <div
-                        id="courseList"
-                        class="course-list"
-                    >
+                    <div>
+                        <strong id="totalUnits">
+                            0
+                        </strong>
 
-                        <div class="empty-state">
-
-                            <h3>
-                                No Courses Yet
-                            </h3>
-
-                            <p>
-                                Add your first course
-                                to start managing
-                                your academic work.
-                            </p>
-
-                        </div>
-
+                        <span>
+                            Total Units
+                        </span>
                     </div>
 
+
+                    <div>
+                        <strong id="courseListCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Listed
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div id="courseList">
+                    <p class="empty-state">
+                        No courses added yet.
+                    </p>
                 </div>
 
             </section>
 
 
-
             <!-- =================================================
-                 ASSIGNMENT MANAGER
+                 ASSIGNMENTS
             ================================================== -->
 
             <section
                 id="assignmentsSection"
-                class="manager-section"
-            >
+                class="dashboard-section">
 
                 <div class="section-header">
 
                     <div>
 
-                        <span class="section-label">
-                            ACADEMICS
+                        <span class="section-icon">
+                            📝
                         </span>
 
                         <h2>
@@ -973,144 +1019,59 @@
                         </h2>
 
                         <p>
-                            Track your assignments and deadlines.
+                            Track assignments and deadlines.
                         </p>
 
                     </div>
 
-
                     <button
                         class="primary-btn"
-                        onclick="openAssignmentForm()"
-                    >
+                        onclick="openAssignmentForm()">
+
                         + Add Assignment
+
                     </button>
 
                 </div>
 
 
-                <!-- Assignment Statistics -->
-
-                <div class="manager-stats">
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Total
-                        </span>
-
-                        <strong id="totalAssignments">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Pending
-                        </span>
-
-                        <strong id="pendingAssignments">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Completed
-                        </span>
-
-                        <strong id="completedAssignments">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Overdue
-                        </span>
-
-                        <strong id="overdueAssignments">
-                            0
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Assignment Form -->
-
                 <div
                     id="assignmentFormCard"
                     class="form-card"
-                    style="display: none;"
-                >
+                    style="display:none;">
 
-                    <div class="form-card-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                ASSIGNMENT
-                            </span>
-
-                            <h3 id="assignmentFormTitle">
-                                Add Assignment
-                            </h3>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="close-btn"
-                            onclick="closeAssignmentForm()"
-                        >
-                            ×
-                        </button>
-
-                    </div>
-
+                    <h3>
+                        Add Assignment
+                    </h3>
 
                     <form id="assignmentForm">
 
-                        <div class="form-grid">
+                        <div class="form-group">
+
+                            <label>
+                                Assignment Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="assignmentTitle"
+                                placeholder="Enter assignment title"
+                                required>
+
+                        </div>
 
 
-                            <div class="form-group">
-
-                                <label for="assignmentTitle">
-                                    Assignment Title
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="assignmentTitle"
-                                    placeholder="e.g. OS Assignment"
-                                    required
-                                >
-
-                            </div>
-
+                        <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="assignmentCourse">
+                                <label>
                                     Course
                                 </label>
 
                                 <select
                                     id="assignmentCourse"
-                                    required
-                                >
+                                    required>
 
                                     <option value="">
                                         Select Course
@@ -1123,47 +1084,14 @@
 
                             <div class="form-group">
 
-                                <label for="assignmentDueDate">
+                                <label>
                                     Due Date
                                 </label>
 
                                 <input
                                     type="date"
                                     id="assignmentDueDate"
-                                    required
-                                >
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label for="assignmentPriority">
-                                    Priority
-                                </label>
-
-                                <select
-                                    id="assignmentPriority"
-                                    required
-                                >
-
-                                    <option value="">
-                                        Select Priority
-                                    </option>
-
-                                    <option value="low">
-                                        Low
-                                    </option>
-
-                                    <option value="medium">
-                                        Medium
-                                    </option>
-
-                                    <option value="high">
-                                        High
-                                    </option>
-
-                                </select>
+                                    required>
 
                             </div>
 
@@ -1172,39 +1100,68 @@
 
                         <div class="form-group">
 
-                            <label for="assignmentDescription">
+                            <label>
+                                Priority
+                            </label>
+
+                            <select
+                                id="assignmentPriority"
+                                required>
+
+                                <option value="">
+                                    Select Priority
+                                </option>
+
+                                <option value="Low">
+                                    Low
+                                </option>
+
+                                <option value="Medium">
+                                    Medium
+                                </option>
+
+                                <option value="High">
+                                    High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
                                 Description
                             </label>
 
                             <textarea
                                 id="assignmentDescription"
                                 rows="4"
-                                placeholder="Assignment details..."
-                            ></textarea>
+                                placeholder="Assignment details">
+                            </textarea>
 
                         </div>
 
 
                         <div
                             id="assignmentMessage"
-                            class="message"
-                        ></div>
+                            class="message">
+                        </div>
 
 
                         <div class="form-actions">
 
                             <button
                                 type="submit"
-                                class="primary-btn"
-                            >
+                                class="primary-btn">
                                 Save Assignment
                             </button>
 
                             <button
                                 type="button"
-                                class="secondary-btn"
                                 onclick="closeAssignmentForm()"
-                            >
+                                class="secondary-btn">
                                 Cancel
                             </button>
 
@@ -1215,93 +1172,95 @@
                 </div>
 
 
-                <!-- Assignment List -->
+                <div class="section-stats">
 
-                <div class="list-card">
+                    <div>
+                        <strong id="totalAssignments">
+                            0
+                        </strong>
 
-                    <div class="list-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                ASSIGNMENTS
-                            </span>
-
-                            <h3>
-                                Your Assignments
-                            </h3>
-
-                        </div>
-
-                        <span
-                            id="assignmentListCount"
-                            class="list-count"
-                        >
-                            0 assignments
+                        <span>
+                            Total
                         </span>
-
                     </div>
 
 
-                    <div
-                        id="assignmentList"
-                        class="assignment-list"
-                    >
+                    <div>
+                        <strong id="pendingAssignments">
+                            0
+                        </strong>
 
-                        <div class="empty-state">
-
-                            <h3>
-                                No Assignments Yet
-                            </h3>
-
-                            <p>
-                                Add your first assignment
-                                to start tracking your work.
-                            </p>
-
-                        </div>
-
+                        <span>
+                            Pending
+                        </span>
                     </div>
 
+
+                    <div>
+                        <strong id="completedAssignments">
+                            0
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong id="overdueAssignments">
+                            0
+                        </strong>
+
+                        <span>
+                            Overdue
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div id="assignmentList">
+                    <p class="empty-state">
+                        No assignments added yet.
+                    </p>
                 </div>
 
             </section>
 
 
-
             <!-- =================================================
-                 TIMETABLE MANAGER
+                 TIMETABLE
             ================================================== -->
 
             <section
                 id="timetableSection"
-                class="manager-section"
-            >
+                class="dashboard-section">
 
                 <div class="section-header">
 
                     <div>
 
-                        <span class="section-label">
-                            SCHEDULE
+                        <span class="section-icon">
+                            📅
                         </span>
 
                         <h2>
-                            Timetable Manager
+                            Timetable
                         </h2>
 
                         <p>
-                            Organize your weekly lecture schedule.
+                            Organize your weekly classes.
                         </p>
 
                     </div>
 
-
                     <button
                         class="primary-btn"
-                        onclick="openTimetableForm()"
-                    >
+                        onclick="openTimetableForm()">
+
                         + Add Class
+
                     </button>
 
                 </div>
@@ -1310,49 +1269,25 @@
                 <div
                     id="timetableFormCard"
                     class="form-card"
-                    style="display: none;"
-                >
+                    style="display:none;">
 
-                    <div class="form-card-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                TIMETABLE
-                            </span>
-
-                            <h3 id="timetableFormTitle">
-                                Add Class
-                            </h3>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="close-btn"
-                            onclick="closeTimetableForm()"
-                        >
-                            ×
-                        </button>
-
-                    </div>
-
+                    <h3>
+                        Add Class
+                    </h3>
 
                     <form id="timetableForm">
 
-                        <div class="form-grid">
-
+                        <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="timetableDay">
+                                <label>
                                     Day
                                 </label>
 
                                 <select
                                     id="timetableDay"
-                                    required
-                                >
+                                    required>
 
                                     <option value="">
                                         Select Day
@@ -1382,24 +1317,8 @@
                                         Saturday
                                     </option>
 
-                                </select>
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label for="timetableCourse">
-                                    Course
-                                </label>
-
-                                <select
-                                    id="timetableCourse"
-                                    required
-                                >
-
-                                    <option value="">
-                                        Select Course
+                                    <option value="Sunday">
+                                        Sunday
                                     </option>
 
                                 </select>
@@ -1409,60 +1328,83 @@
 
                             <div class="form-group">
 
-                                <label for="timetableStart">
+                                <label>
+                                    Course
+                                </label>
+
+                                <select
+                                    id="timetableCourse"
+                                    required>
+
+                                    <option value="">
+                                        Select Course
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>
                                     Start Time
                                 </label>
 
                                 <input
                                     type="time"
                                     id="timetableStart"
-                                    required
-                                >
+                                    required>
 
                             </div>
 
 
                             <div class="form-group">
 
-                                <label for="timetableEnd">
+                                <label>
                                     End Time
                                 </label>
 
                                 <input
                                     type="time"
                                     id="timetableEnd"
-                                    required
-                                >
+                                    required>
 
                             </div>
 
+                        </div>
+
+
+                        <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="timetableVenue">
+                                <label>
                                     Venue
                                 </label>
 
                                 <input
                                     type="text"
                                     id="timetableVenue"
-                                    placeholder="e.g. ICT Hall"
-                                >
+                                    placeholder="e.g. Lecture Theatre 1">
 
                             </div>
 
 
                             <div class="form-group">
 
-                                <label for="timetableLecturer">
+                                <label>
                                     Lecturer
                                 </label>
 
                                 <input
                                     type="text"
                                     id="timetableLecturer"
-                                    placeholder="Lecturer name"
-                                >
+                                    placeholder="Lecturer name">
 
                             </div>
 
@@ -1471,24 +1413,22 @@
 
                         <div
                             id="timetableMessage"
-                            class="message"
-                        ></div>
+                            class="message">
+                        </div>
 
 
                         <div class="form-actions">
 
                             <button
                                 type="submit"
-                                class="primary-btn"
-                            >
+                                class="primary-btn">
                                 Save Class
                             </button>
 
                             <button
                                 type="button"
-                                class="secondary-btn"
                                 onclick="closeTimetableForm()"
-                            >
+                                class="secondary-btn">
                                 Cancel
                             </button>
 
@@ -1499,77 +1439,48 @@
                 </div>
 
 
-                <div class="list-card">
+                <div class="section-count">
 
-                    <div class="list-header">
+                    <strong id="timetableListCount">
+                        0
+                    </strong>
 
-                        <div>
+                    <span>
+                        Classes
+                    </span>
 
-                            <span class="section-label">
-                                WEEKLY SCHEDULE
-                            </span>
-
-                            <h3>
-                                Your Timetable
-                            </h3>
-
-                        </div>
-
-                        <span
-                            id="timetableListCount"
-                            class="list-count"
-                        >
-                            0 classes
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div
-                        id="timetableList"
-                        class="timetable-list"
-                    >
+                <div id="timetableList">
 
-                        <div class="empty-state">
-
-                            <h3>
-                                No Classes Yet
-                            </h3>
-
-                            <p>
-                                Add your first class
-                                to build your timetable.
-                            </p>
-
-                        </div>
-
-                    </div>
+                    <p class="empty-state">
+                        No timetable entries yet.
+                    </p>
 
                 </div>
 
             </section>
 
 
-
             <!-- =================================================
-                 GOALS MANAGER
+                 GOALS
             ================================================== -->
 
             <section
                 id="goalsSection"
-                class="manager-section"
-            >
+                class="dashboard-section">
 
                 <div class="section-header">
 
                     <div>
 
-                        <span class="section-label">
-                            PRODUCTIVITY
+                        <span class="section-icon">
+                            🎯
                         </span>
 
                         <h2>
-                            Goals Manager
+                            Goals
                         </h2>
 
                         <p>
@@ -1578,69 +1489,13 @@
 
                     </div>
 
-
                     <button
                         class="primary-btn"
-                        onclick="openGoalForm()"
-                    >
+                        onclick="openGoalForm()">
+
                         + Add Goal
+
                     </button>
-
-                </div>
-
-
-                <div class="manager-stats">
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Total Goals
-                        </span>
-
-                        <strong id="totalGoals">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Active
-                        </span>
-
-                        <strong id="activeGoals">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Completed
-                        </span>
-
-                        <strong id="completedGoals">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="manager-stat-card">
-
-                        <span>
-                            Average Progress
-                        </span>
-
-                        <strong id="averageGoalProgress">
-                            0%
-                        </strong>
-
-                    </div>
 
                 </div>
 
@@ -1648,65 +1503,40 @@
                 <div
                     id="goalFormCard"
                     class="form-card"
-                    style="display: none;"
-                >
+                    style="display:none;">
 
-                    <div class="form-card-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                GOAL
-                            </span>
-
-                            <h3 id="goalFormTitle">
-                                Add Goal
-                            </h3>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="close-btn"
-                            onclick="closeGoalForm()"
-                        >
-                            ×
-                        </button>
-
-                    </div>
-
+                    <h3>
+                        Add Goal
+                    </h3>
 
                     <form id="goalForm">
 
-                        <div class="form-grid">
+                        <div class="form-group">
+
+                            <label>
+                                Goal Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="goalTitle"
+                                placeholder="e.g. Learn JavaScript"
+                                required>
+
+                        </div>
 
 
-                            <div class="form-group">
-
-                                <label for="goalTitle">
-                                    Goal Title
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="goalTitle"
-                                    placeholder="e.g. Learn JavaScript"
-                                    required
-                                >
-
-                            </div>
-
+                        <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="goalCategory">
+                                <label>
                                     Category
                                 </label>
 
                                 <select
                                     id="goalCategory"
-                                    required
-                                >
+                                    required>
 
                                     <option value="">
                                         Select Category
@@ -1724,10 +1554,6 @@
                                         Personal
                                     </option>
 
-                                    <option value="Career">
-                                        Career
-                                    </option>
-
                                     <option value="Financial">
                                         Financial
                                     </option>
@@ -1743,33 +1569,14 @@
 
                             <div class="form-group">
 
-                                <label for="goalTargetDate">
+                                <label>
                                     Target Date
                                 </label>
 
                                 <input
                                     type="date"
                                     id="goalTargetDate"
-                                    required
-                                >
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label for="goalProgress">
-                                    Progress (%)
-                                </label>
-
-                                <input
-                                    type="number"
-                                    id="goalProgress"
-                                    min="0"
-                                    max="100"
-                                    value="0"
-                                    required
-                                >
+                                    required>
 
                             </div>
 
@@ -1778,39 +1585,53 @@
 
                         <div class="form-group">
 
-                            <label for="goalDescription">
+                            <label>
+                                Progress (%)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="goalProgress"
+                                min="0"
+                                max="100"
+                                value="0">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
                                 Description
                             </label>
 
                             <textarea
                                 id="goalDescription"
                                 rows="4"
-                                placeholder="Describe your goal..."
-                            ></textarea>
+                                placeholder="Describe your goal">
+                            </textarea>
 
                         </div>
 
 
                         <div
                             id="goalMessage"
-                            class="message"
-                        ></div>
+                            class="message">
+                        </div>
 
 
                         <div class="form-actions">
 
                             <button
                                 type="submit"
-                                class="primary-btn"
-                            >
+                                class="primary-btn">
                                 Save Goal
                             </button>
 
                             <button
                                 type="button"
-                                class="secondary-btn"
                                 onclick="closeGoalForm()"
-                            >
+                                class="secondary-btn">
                                 Cancel
                             </button>
 
@@ -1821,77 +1642,83 @@
                 </div>
 
 
-                <div class="list-card">
+                <div class="section-stats">
 
-                    <div class="list-header">
+                    <div>
+                        <strong id="totalGoals">
+                            0
+                        </strong>
 
-                        <div>
-
-                            <span class="section-label">
-                                GOALS
-                            </span>
-
-                            <h3>
-                                Your Goals
-                            </h3>
-
-                        </div>
-
-                        <span
-                            id="goalListCount"
-                            class="list-count"
-                        >
-                            0 goals
+                        <span>
+                            Total
                         </span>
-
                     </div>
 
 
-                    <div
-                        id="goalList"
-                        class="goal-list"
-                    >
+                    <div>
+                        <strong id="activeGoals">
+                            0
+                        </strong>
 
-                        <div class="empty-state">
-
-                            <h3>
-                                No Goals Yet
-                            </h3>
-
-                            <p>
-                                Create your first goal
-                                and start tracking progress.
-                            </p>
-
-                        </div>
-
+                        <span>
+                            Active
+                        </span>
                     </div>
+
+
+                    <div>
+                        <strong id="completedGoals">
+                            0
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong id="averageGoalProgress">
+                            0%
+                        </strong>
+
+                        <span>
+                            Average Progress
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div id="goalList">
+
+                    <p class="empty-state">
+                        No goals added yet.
+                    </p>
 
                 </div>
 
             </section>
 
 
-
             <!-- =================================================
-                 EXPENSE MANAGER
+                 EXPENSES
             ================================================== -->
 
             <section
                 id="expensesSection"
-                class="manager-section"
-            >
+                class="dashboard-section">
 
                 <div class="section-header">
 
                     <div>
 
-                        <span class="section-label">
-                            FINANCE
+                        <span class="section-icon">
+                            💰
                         </span>
 
                         <h2>
-                            Expense Manager
+                            Expenses
                         </h2>
 
                         <p>
@@ -1900,81 +1727,13 @@
 
                     </div>
 
-
                     <button
                         class="primary-btn"
-                        onclick="openExpenseForm()"
-                    >
+                        onclick="openExpenseForm()">
+
                         + Add Transaction
+
                     </button>
-
-                </div>
-
-
-                <div class="expense-stats">
-
-
-                    <div class="expense-stat-card">
-
-                        <div class="expense-stat-icon">
-                            💰
-                        </div>
-
-                        <div>
-
-                            <span>
-                                Total Income
-                            </span>
-
-                            <h3 id="totalIncome">
-                                ₦0
-                            </h3>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="expense-stat-card">
-
-                        <div class="expense-stat-icon">
-                            💸
-                        </div>
-
-                        <div>
-
-                            <span>
-                                Total Expenses
-                            </span>
-
-                            <h3 id="totalExpenses">
-                                ₦0
-                            </h3>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="expense-stat-card">
-
-                        <div class="expense-stat-icon">
-                            💵
-                        </div>
-
-                        <div>
-
-                            <span>
-                                Balance
-                            </span>
-
-                            <h3 id="expenseBalance">
-                                ₦0
-                            </h3>
-
-                        </div>
-
-                    </div>
 
                 </div>
 
@@ -1982,59 +1741,35 @@
                 <div
                     id="expenseFormCard"
                     class="form-card"
-                    style="display: none;"
-                >
+                    style="display:none;">
 
-                    <div class="form-card-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                TRANSACTION
-                            </span>
-
-                            <h3 id="expenseFormTitle">
-                                Add Transaction
-                            </h3>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="close-btn"
-                            onclick="closeExpenseForm()"
-                        >
-                            ×
-                        </button>
-
-                    </div>
-
+                    <h3>
+                        Add Transaction
+                    </h3>
 
                     <form id="expenseForm">
 
-                        <div class="form-grid">
-
+                        <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="expenseType">
-                                    Transaction Type
+                                <label>
+                                    Type
                                 </label>
 
                                 <select
                                     id="expenseType"
-                                    required
-                                >
+                                    required>
 
                                     <option value="">
                                         Select Type
                                     </option>
 
-                                    <option value="income">
+                                    <option value="Income">
                                         Income
                                     </option>
 
-                                    <option value="expense">
+                                    <option value="Expense">
                                         Expense
                                     </option>
 
@@ -2045,32 +1780,34 @@
 
                             <div class="form-group">
 
-                                <label for="expenseAmount">
-                                    Amount (₦)
+                                <label>
+                                    Amount
                                 </label>
 
                                 <input
                                     type="number"
                                     id="expenseAmount"
-                                    min="1"
+                                    min="0"
                                     step="0.01"
-                                    placeholder="e.g. 5000"
-                                    required
-                                >
+                                    placeholder="₦0.00"
+                                    required>
 
                             </div>
 
+                        </div>
+
+
+                        <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="expenseCategory">
+                                <label>
                                     Category
                                 </label>
 
                                 <select
                                     id="expenseCategory"
-                                    required
-                                >
+                                    required>
 
                                     <option value="">
                                         Select Category
@@ -2084,36 +1821,20 @@
                                         Transport
                                     </option>
 
-                                    <option value="School">
-                                        School
-                                    </option>
-
                                     <option value="Data">
                                         Data
                                     </option>
 
-                                    <option value="Accommodation">
-                                        Accommodation
+                                    <option value="School">
+                                        School
                                     </option>
 
                                     <option value="Entertainment">
                                         Entertainment
                                     </option>
 
-                                    <option value="Shopping">
-                                        Shopping
-                                    </option>
-
-                                    <option value="Salary">
-                                        Salary
-                                    </option>
-
-                                    <option value="Allowance">
-                                        Allowance
-                                    </option>
-
-                                    <option value="Business">
-                                        Business
+                                    <option value="Accommodation">
+                                        Accommodation
                                     </option>
 
                                     <option value="Other">
@@ -2127,15 +1848,14 @@
 
                             <div class="form-group">
 
-                                <label for="expenseDate">
+                                <label>
                                     Date
                                 </label>
 
                                 <input
                                     type="date"
                                     id="expenseDate"
-                                    required
-                                >
+                                    required>
 
                             </div>
 
@@ -2144,39 +1864,37 @@
 
                         <div class="form-group">
 
-                            <label for="expenseDescription">
+                            <label>
                                 Description
                             </label>
 
                             <textarea
                                 id="expenseDescription"
                                 rows="4"
-                                placeholder="What was this transaction for?"
-                            ></textarea>
+                                placeholder="Transaction details">
+                            </textarea>
 
                         </div>
 
 
                         <div
                             id="expenseMessage"
-                            class="message"
-                        ></div>
+                            class="message">
+                        </div>
 
 
                         <div class="form-actions">
 
                             <button
                                 type="submit"
-                                class="primary-btn"
-                            >
+                                class="primary-btn">
                                 Save Transaction
                             </button>
 
                             <button
                                 type="button"
-                                class="secondary-btn"
                                 onclick="closeExpenseForm()"
-                            >
+                                class="secondary-btn">
                                 Cancel
                             </button>
 
@@ -2187,56 +1905,65 @@
                 </div>
 
 
-                <div class="list-card">
+                <div class="finance-stats">
 
-                    <div class="list-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                TRANSACTIONS
-                            </span>
-
-                            <h3>
-                                Your Transactions
-                            </h3>
-
-                        </div>
-
-                        <span
-                            id="expenseListCount"
-                            class="list-count"
-                        >
-                            0 transactions
+                    <div>
+                        <span>
+                            Income
                         </span>
 
+                        <strong id="totalIncome">
+                            ₦0.00
+                        </strong>
                     </div>
 
 
-                    <div
-                        id="expenseList"
-                        class="expense-list"
-                    >
+                    <div>
+                        <span>
+                            Expenses
+                        </span>
 
-                        <div class="empty-state">
+                        <strong id="totalExpenses">
+                            ₦0.00
+                        </strong>
+                    </div>
 
-                            <h3>
-                                No Transactions Yet
-                            </h3>
 
-                            <p>
-                                Add your first income or
-                                expense to start tracking.
-                            </p>
+                    <div>
+                        <span>
+                            Balance
+                        </span>
 
-                        </div>
-
+                        <strong id="expenseBalance">
+                            ₦0.00
+                        </strong>
                     </div>
 
                 </div>
 
-            </section>
 
+                <div class="section-count">
+
+                    <strong id="expenseListCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Transactions
+                    </span>
+
+                </div>
+
+
+                <div id="expenseList">
+
+                    <p class="empty-state">
+                        No transactions added yet.
+                    </p>
+
+                </div>
+
+            </section>
 
 
             <!-- =================================================
@@ -2245,15 +1972,14 @@
 
             <section
                 id="studyTimerSection"
-                class="manager-section"
-            >
+                class="dashboard-section">
 
                 <div class="section-header">
 
                     <div>
 
-                        <span class="section-label">
-                            PRODUCTIVITY
+                        <span class="section-icon">
+                            ⏱️
                         </span>
 
                         <h2>
@@ -2261,8 +1987,8 @@
                         </h2>
 
                         <p>
-                            Stay focused and manage your
-                            study sessions.
+                            Focus on your studies using
+                            the Pomodoro technique.
                         </p>
 
                     </div>
@@ -2270,214 +1996,148 @@
                 </div>
 
 
-                <div class="study-timer-container">
+                <div class="timer-card">
+
+                    <div class="timer-modes">
+
+                        <button
+                            id="focusModeBtn"
+                            onclick="setTimerMode('focus')">
+
+                            Focus
+
+                        </button>
+
+                        <button
+                            id="shortBreakModeBtn"
+                            onclick="setTimerMode('shortBreak')">
+
+                            Short Break
+
+                        </button>
+
+                        <button
+                            id="longBreakModeBtn"
+                            onclick="setTimerMode('longBreak')">
+
+                            Long Break
+
+                        </button>
+
+                    </div>
 
 
-                    <!-- Timer Card -->
-
-                    <div class="timer-card">
-
-                        <div class="timer-header">
-
-                            <span class="section-label">
-                                STUDY SESSION
-                            </span>
-
-                            <h3 id="timerMode">
-                                Focus Time
-                            </h3>
-
-                        </div>
+                    <p id="timerMode">
+                        Focus
+                    </p>
 
 
-                        <div class="timer-display">
+                    <div class="timer-display">
 
-                            <span id="timerMinutes">
-                                25
-                            </span>
+                        <span id="timerMinutes">
+                            25
+                        </span>
 
-                            <span class="timer-colon">
-                                :
-                            </span>
+                        <span>
+                            :
+                        </span>
 
-                            <span id="timerSeconds">
-                                00
-                            </span>
+                        <span id="timerSeconds">
+                            00
+                        </span>
 
-                        </div>
-
-
-                        <div class="timer-progress">
-
-                            <div
-                                id="timerProgressBar"
-                                class="timer-progress-bar"
-                            ></div>
-
-                        </div>
+                    </div>
 
 
-                        <div class="timer-controls">
+                    <div class="timer-progress">
 
-                            <button
-                                id="startTimerBtn"
-                                class="primary-btn"
-                                onclick="startStudyTimer()"
-                            >
-                                ▶ Start
-                            </button>
-
-
-                            <button
-                                id="pauseTimerBtn"
-                                class="secondary-btn"
-                                onclick="pauseStudyTimer()"
-                                disabled
-                            >
-                                ⏸ Pause
-                            </button>
-
-
-                            <button
-                                class="secondary-btn"
-                                onclick="resetStudyTimer()"
-                            >
-                                ↻ Reset
-                            </button>
-
-                        </div>
-
-
-                        <div class="timer-modes">
-
-
-                            <button
-                                id="focusModeBtn"
-                                class="timer-mode-btn active"
-                                onclick="setTimerMode('focus')"
-                            >
-                                Focus
-
-                                <span>
-                                    25 min
-                                </span>
-
-                            </button>
-
-
-                            <button
-                                id="shortBreakModeBtn"
-                                class="timer-mode-btn"
-                                onclick="setTimerMode('short')"
-                            >
-                                Short Break
-
-                                <span>
-                                    5 min
-                                </span>
-
-                            </button>
-
-
-                            <button
-                                id="longBreakModeBtn"
-                                class="timer-mode-btn"
-                                onclick="setTimerMode('long')"
-                            >
-                                Long Break
-
-                                <span>
-                                    15 min
-                                </span>
-
-                            </button>
-
+                        <div
+                            id="timerProgressBar">
                         </div>
 
                     </div>
 
 
+                    <div class="timer-controls">
 
-                    <!-- Timer Statistics -->
+                        <button
+                            id="startTimerBtn"
+                            class="primary-btn"
+                            onclick="startStudyTimer()">
 
-                    <div class="timer-stat-card">
+                            ▶ Start
 
-                        <div class="timer-stat-header">
+                        </button>
 
-                            <div>
+                        <button
+                            id="pauseTimerBtn"
+                            class="secondary-btn"
+                            onclick="pauseStudyTimer()"
+                            disabled>
 
-                                <span class="section-label">
-                                    TODAY
-                                </span>
+                            ⏸ Pause
 
-                                <h3>
-                                    Study Statistics
-                                </h3>
+                        </button>
 
-                            </div>
+                        <button
+                            class="secondary-btn"
+                            onclick="resetStudyTimer()">
 
+                            ↻ Reset
 
-                            <div class="timer-stat-icon">
-                                📚
-                            </div>
+                        </button>
 
-                        </div>
-
-
-                        <div class="timer-stat-list">
-
-
-                            <div class="timer-stat-item">
-
-                                <span>
-                                    Completed Sessions
-                                </span>
-
-                                <strong
-                                    id="completedStudySessions"
-                                >
-                                    0
-                                </strong>
-
-                            </div>
+                    </div>
 
 
-                            <div class="timer-stat-item">
+                    <div
+                        id="timerMessage"
+                        class="message">
+                    </div>
 
-                                <span>
-                                    Focus Minutes
-                                </span>
-
-                                <strong
-                                    id="totalFocusMinutes"
-                                >
-                                    0
-                                </strong>
-
-                            </div>
+                </div>
 
 
-                            <div class="timer-stat-item">
+                <div class="timer-stats">
 
-                                <span>
-                                    Current Mode
-                                </span>
+                    <div>
 
-                                <strong
-                                    id="currentTimerMode"
-                                >
-                                    Focus
-                                </strong>
+                        <strong
+                            id="completedStudySessions">
+                            0
+                        </strong>
 
-                            </div>
+                        <span>
+                            Completed Sessions
+                        </span>
 
-                        </div>
+                    </div>
 
 
-                        <div
-                            id="timerMessage"
-                            class="message"
-                        ></div>
+                    <div>
+
+                        <strong
+                            id="totalFocusMinutes">
+                            0
+                        </strong>
+
+                        <span>
+                            Focus Minutes
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong
+                            id="currentTimerMode">
+                            Focus
+                        </strong>
+
+                        <span>
+                            Current Mode
+                        </span>
 
                     </div>
 
@@ -2486,6 +2146,53 @@
             </section>
 
 
+            <!-- =================================================
+                 NOTIFICATIONS
+            ================================================== -->
+
+            <section
+                id="notificationsSection"
+                class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-icon">
+                            🔔
+                        </span>
+
+                        <h2>
+                            Notifications
+                        </h2>
+
+                        <p>
+                            Stay updated with your academic activities.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="secondary-btn"
+                        onclick="markAllNotificationsRead()">
+
+                        Mark All as Read
+
+                    </button>
+
+                </div>
+
+
+                <div id="notificationList">
+
+                    <p class="empty-state">
+                        No notifications yet.
+                    </p>
+
+                </div>
+
+            </section>
+
 
             <!-- =================================================
                  PROFILE
@@ -2493,23 +2200,22 @@
 
             <section
                 id="profileSection"
-                class="manager-section"
-            >
+                class="dashboard-section">
 
                 <div class="section-header">
 
                     <div>
 
-                        <span class="section-label">
-                            ACCOUNT
+                        <span class="section-icon">
+                            👤
                         </span>
 
                         <h2>
-                            Student Profile
+                            Profile
                         </h2>
 
                         <p>
-                            View your DailyMate account information.
+                            Your DailyMate student profile.
                         </p>
 
                     </div>
@@ -2519,36 +2225,42 @@
 
                 <div class="profile-card">
 
+                    <div
+                        id="profileAvatar"
+                        class="profile-avatar">
+                        S
+                    </div>
 
-                    <div class="profile-top">
 
-                        <div
-                            id="profileAvatar"
-                            class="profile-avatar"
-                        >
-                            D
+                    <div class="profile-information">
+
+                        <div>
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong id="profileFullName">
+                                Student
+                            </strong>
+
                         </div>
 
 
                         <div>
 
-                            <h2 id="profileFullName">
-                                Student
-                            </h2>
+                            <span>
+                                Email
+                            </span>
 
-                            <p id="profileEmail">
-                                student@example.com
-                            </p>
+                            <strong id="profileEmail">
+                                -
+                            </strong>
 
                         </div>
 
-                    </div>
 
-
-                    <div class="profile-details">
-
-
-                        <div class="profile-detail">
+                        <div>
 
                             <span>
                                 University
@@ -2561,7 +2273,7 @@
                         </div>
 
 
-                        <div class="profile-detail">
+                        <div>
 
                             <span>
                                 Department
@@ -2574,7 +2286,7 @@
                         </div>
 
 
-                        <div class="profile-detail">
+                        <div>
 
                             <span>
                                 Level
@@ -2587,7 +2299,7 @@
                         </div>
 
 
-                        <div class="profile-detail">
+                        <div>
 
                             <span>
                                 Semester
@@ -2608,15 +2320,38 @@
 
         </main>
 
-    </section>
 
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="dashboard-footer">
+
+            <div class="dashboard-logo">
+                DailyMate
+            </div>
+
+            <p>
+                Your student productivity companion.
+            </p>
+
+            <p>
+                © 2026 DailyMate. All rights reserved.
+            </p>
+
+        </footer>
+
+    </section>
 
 
     <!-- =====================================================
          JAVASCRIPT
     ====================================================== -->
 
-    <script src="script.js"></script>
+    <script
+        type="module"
+        src="script.js">
+    </script>
 
 </body>
 
